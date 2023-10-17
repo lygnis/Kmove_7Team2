@@ -18,7 +18,7 @@ import com.command.CM_CommandHandler;
 import com.command.Handler.CM_NullHandler;
 
 
-public class TControllerUsingURI extends HttpServlet {
+public class CM_ControllerUsingURI extends HttpServlet {
 	// <커맨드 , 핸들러 인스턴스> 매핑정보 저장
 	private Map<String, CM_CommandHandler> commandHandlerMap = new HashMap<>();
 	// 서블렛 초기화 시
