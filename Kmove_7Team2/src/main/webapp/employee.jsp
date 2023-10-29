@@ -80,11 +80,11 @@
 		<p>給与 & ４代保険</p>
 		<table border="1" width="900px" height="400px">
 			<tr>
-				<td align=center>４代保険</td>
+				<td align=center>４大保険</td>
 				<td colspan="3"><input type="checkbox" name="#" value="#">国民年金
 					<input type="checkbox" name="#" value="#">健康保険 <input
 					type="checkbox" name="#" value="#">老人長期療養保険 <input
-					type="checkbox" name="#" value="#">雇用</td>
+					type="checkbox" name="#" value="#">雇用保険</td>
 			</tr>
 			<tr>
 				<td align=center>甲勤税</td>
