@@ -21,6 +21,8 @@ nav a {
     width: 900px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 300px; /* 여백 추가 */
+    box-sizing: border-box; /* 여백이 너비에 포함되도록 설정 */
 }
 
 .container p {
