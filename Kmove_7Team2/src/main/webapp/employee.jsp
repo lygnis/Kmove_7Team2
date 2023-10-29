@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>사원 등록</title>
+<title>社員登録</title>
 <link rel="stylesheet" type="text/css" href="testFile.css">
 </head>
 <body>
 
 	<nav>
-		<a href="#">메인메뉴</a> <a href="#">사원등록</a> <a href="#">사원현황</a>
+		<a href="#">メイン</a> <a href="#">社員登録</a> <a href="#">社員現況</a>
 	</nav>
 	<div align=center>
 		<p>基本情報</p>
@@ -39,7 +39,7 @@
 						<option value="106">管理チーム</option>
 						<option value="107">機会戦略チーム</option>
 				</select></td>
-				<td align=center>職位</td>
+				<td align=center>役職</td>
 				<td><select name="#">
 						<option value="200">選択</option>
 						<option value="201">理事</option>
@@ -113,8 +113,7 @@
 				<td align=center>ドゥルヌリ社会保険支援</td>
 				<td colspan="3"><input type="checkbox" name="#" value="#">該当なし
 					<input type="checkbox" name="#" value="#">新規加入者(80% 支援) <input
-					type="checkbox" name="#" value="#">新規加入者(90% 支援)<br />
-					*基本情報から外国人に設定された社員は、国民年金保険料の支援対象から除外されます。</td>
+					type="checkbox" name="#" value="#">新規加入者(90% 支援)</td>
 			</tr>
 			<tr>
 				<td align=center>基本給/日給</td>
@@ -182,7 +181,7 @@
 		<table border="1" width="900px" height="80px">
 			<tr align=center>
 				<td>兵役区分</td>
-				<td>群別</td>
+				<td>軍別</td>
 				<td>服務期間(開始)</td>
 				<td>服務期間(終了)</td>
 				<td>最終階級</td>
@@ -192,13 +191,13 @@
 			<tr>
 				<td><select name="#">
 						<option value="400">選択</option>
-						<option value="401">군필</option>
-						<option value="402">미필</option>
+						<option value="401">兵役</option>
+						<option value="402">未了</option>
 				</select></td>
 				<td><select name="#">
 						<option value="500">選択</option>
-						<option value="501">육군</option>
-						<option value="502">공군</option>
+						<option value="501">陸軍</option>
+						<option value="502">空軍</option>
 				</select></td>
 				<td><input type="date" name="#" /></td>
 				<td><input type="date" name="#" /></td>
