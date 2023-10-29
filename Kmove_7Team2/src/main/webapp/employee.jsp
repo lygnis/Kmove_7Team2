@@ -14,7 +14,7 @@
 	</nav>
 	<div align=center>
 		<p>基本情報</p>
-		<table border="1" width="900px" height="300px">
+		<table border="1" width="600px" height="300px">
 			<tr>
 				<td align=center>社員番号</td>
 				<td><input type="text" name="#" /></td>
@@ -78,7 +78,7 @@
 		</table>
 
 		<p>給与 & ４代保険</p>
-		<table border="1" width="900px" height="400px">
+		<table border="1" width="600px" height="400px">
 			<tr>
 				<td align=center>４大保険</td>
 				<td colspan="3"><input type="checkbox" name="#" value="#">国民年金
@@ -143,7 +143,7 @@
 				</select> <input type="text" name="#"></td>
 			</tr>
 		</table>
-		<table border="1" width="900px" height="100px">
+		<table border="1" width="600px" height="100px">
 			<tr>
 				<td align=center>区分</td>
 				<td align=center>記号番号</td>
@@ -178,7 +178,7 @@
 		<p />
 		兵役.
 		<p />
-		<table border="1" width="900px" height="80px">
+		<table border="1" width="600px" height="80px">
 			<tr align=center>
 				<td>兵役区分</td>
 				<td>軍別</td>
