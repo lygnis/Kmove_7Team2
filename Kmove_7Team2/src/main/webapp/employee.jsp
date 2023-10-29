@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>사원 등록</title>
+<link rel="stylesheet" type="text/css" href="testFile.css">
 </head>
 <body>
 
