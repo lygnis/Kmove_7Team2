@@ -121,21 +121,6 @@
 				<td>月給制の場合は月基本給、日雇い労働者の場合は日給を入力します。</td>
 			</tr>
 			<tr>
-				<td align=center>国民年金基準所得月額</td>
-				<td><input type="text" name="#">円</td>
-				<td rowspan="3">入力時に4大保険控除時に優先適用され、<br /> 未入力時に当該勤続月の非課税を
-					除く課税合計で適用されます。
-				</td>
-			</tr>
-			<tr>
-				<td align=center>健康保険報酬月額</td>
-				<td><input type="text" name="#">円</td>
-			</tr>
-			<tr>
-				<td align=center>雇用保険報酬月額</td>
-				<td><input type="text" name="#">円</td>
-			</tr>
-			<tr>
 				<td align=center>給与口座</td>
 				<td colspan="3"><select name="#">
 						<option value="300">選択</option>
