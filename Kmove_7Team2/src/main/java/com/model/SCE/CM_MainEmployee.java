@@ -16,7 +16,4 @@ public class CM_MainEmployee {
 		super();
 		this.empNo = req.getParameter("empNo");
 	}
-	
-	
-	
 }

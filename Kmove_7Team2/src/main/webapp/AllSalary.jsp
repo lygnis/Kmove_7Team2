@@ -76,8 +76,43 @@ tr:hover {
 </table>
 </div>
 
+
+
 <div class="graph-container">
     <canvas id="combinedChart" width="600" height="400"></canvas>
+</div>
+
+<div align="center">
+<table border="1">
+    <tr>
+        <th>구분</th>
+        <th width="70">1</th>
+        <th width="70">2</th>
+        <th width="70">3</th>
+        <th width="70">4</th>
+        <th width="70">5</th>
+        <th width="70">6</th>
+        <th width="70">7</th>
+        <th width="70">8</th>
+        <th width="70">9</th>
+        <th width="70">10</th>
+        <th width="70">11</th>
+        <th width="70">12</th>
+    </tr>
+    <tr>
+    	<th>전체 급여액</th>
+    </tr>
+     <tr>
+    	<th>증가율</th>
+    </tr>
+     <tr>
+    	<th>인원명</th>
+    </tr>
+     <tr>
+    	<th>증가율</th>
+    </tr>
+    
+</table>
 </div>
 
 <script>
