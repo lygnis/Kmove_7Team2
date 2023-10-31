@@ -66,18 +66,18 @@
 						<option value="201">社長</option>
 				</select></td>
 			</tr>
-			
-				<td align=center>住民番号</td>
-				<td>610101-0000000</td>
-				<td align=center>住所</td>
-				<td colspan="3">서울특별시 성동구 성수동1가 코오롱디지털 타워 3차 901호</td>
+
+			<td align=center>住民番号</td>
+			<td>610101-0000000</td>
+			<td align=center>住所</td>
+			<td colspan="3">서울특별시 성동구 성수동1가 코오롱디지털 타워 3차 901호</td>
 			</tr>
 			<tr>
 				<td align=center>携帯番号</td>
 				<td>010-1111-0000</td>
 				<td align=center>E-mail</td>
 				<td>ceo@naver.com</td>
-				</tr>
+			</tr>
 			<tr>
 				<td align=center>その他の事項</td>
 				<td colspan="3"><textarea name="#" rows="4" cols="110"></textarea></td>
@@ -96,15 +96,16 @@
 			</tr>
 			<tr>
 				<td align=center>甲勤税</td>
-				<td colspan="3"><input type="checkbox" name="gapgeun" value="勤労所得者税額"
-					checked>勤労所得者 税額 : <select name="sm_busin_per">
+				<td colspan="3"><input type="checkbox" name="gapgeun"
+					value="勤労所得者税額" checked>勤労所得者 税額 : <select
+					name="sm_busin_per">
 						<option value="100">100%</option>
 						<option value="30">30%</option>
 						<option value="50">50%</option>
 						<option value="80">80%</option>
 						<option value="120">120%</option>
-				</select> <input type="checkbox" name="smBusinPer" value="中小企業青年所得税の減免">中小企業青年所得税の減免 <select
-					name="sm_busin_per">
+				</select> <input type="checkbox" name="smBusinPer" value="中小企業青年所得税の減免">中小企業青年所得税の減免
+					<select name="sm_busin_per">
 						<option value="">選択</option>
 						<option value="50">50%</option>
 						<option value="70">70%</option>
@@ -119,8 +120,7 @@
 			</tr>
 			<tr>
 				<td align=center>給与口座</td>
-				<td colspan="3">
-				</select> 120-86-50680</td>
+				<td colspan="3"></select> 120-86-50680</td>
 			</tr>
 		</table>
 		<p />
@@ -138,10 +138,12 @@
 			</tr>
 			<tr align=center>
 				<td><select name="兵役区分">
+						<option value="">選択</option>
 						<option value="兵役">兵役</option>
 						<option value="未了">未了</option>
 				</select></td>
 				<td><select name="群別">
+						<option value="">選択</option>
 						<option value="陸軍">陸軍</option>
 						<option value="空軍">空軍</option>
 				</select></td>
@@ -153,18 +155,19 @@
 			</tr>
 		</table>
 		<p>
-			<input type="submit" value="リスト">　<input type="submit" value="修正">　<input type="submit" value="新規社員登録">
+			<input type="submit" value="保存"> <input type="submit"
+				value="キャンセル">
 		</p>
 	</div>
 </body>
 <style>
-#S{
-margin-right: 200px;
-
+#S {
+	margin-right: 200px;
 }
 
-
-aside{float:left;
-margin-left:30px;}
+aside {
+	float: left;
+	margin-left: 30px;
+}
 </style>
 </html>
