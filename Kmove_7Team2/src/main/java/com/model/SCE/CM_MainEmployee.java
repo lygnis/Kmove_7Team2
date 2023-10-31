@@ -15,9 +15,6 @@ public class CM_MainEmployee {
 	public CM_MainEmployee(HttpServletRequest req) {
 		super();
 		this.empNo = req.getParameter("empNo");
-		employee = new CM_Employee(req.getParameter("empNo"), empNo, null, null, 
-				empNo, empNo, empNo, empNo, 
-				empNo, empNo, empNo, empNo, 
-				empNo, empNo, empNo);
+		this.employee = new CM_Employee(empNo, );
 	}
 }
