@@ -51,7 +51,7 @@ public class CM_ConvertHelper {
 	}
 
 	static public String toTimeString(Date date) {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		return dateFormat.format(date);
 	}
 
