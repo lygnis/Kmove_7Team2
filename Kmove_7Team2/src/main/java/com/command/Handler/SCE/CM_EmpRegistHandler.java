@@ -21,7 +21,6 @@ public class CM_EmpRegistHandler implements CM_CommandHandler {
 		}
 	}
 	private String processForm(HttpServletRequest req, HttpServletResponse resp)throws Exception {
-		
 		return null;
 	}
 	
