@@ -153,7 +153,7 @@
 			</tr>
 		</table>
 		<p>
-			<input type="submit" value="リスト">　<input type="submit" value="修正">　<input type="submit" value="新規社員登録">
+			<input type="submit" value="保存"> <input type="submit" value="リスト">　<input type="submit" value="新規社員登録">
 		</p>
 	</div>
 </body>
