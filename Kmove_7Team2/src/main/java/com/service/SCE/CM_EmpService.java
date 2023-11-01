@@ -7,4 +7,5 @@ public class CM_EmpService {
 	public static CM_EmpService getInstance() {
 		return instance;
 	}
+	private int temp;
 }
