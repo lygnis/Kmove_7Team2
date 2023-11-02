@@ -59,7 +59,7 @@ input[type="submit"]:hover {
 <body>
     <div class="container">
         <h2>会員加入</h2>
-        <form method="post" action="regi.do">
+        <form method="post" action="join.do">
             <label for="username">ID(社員番号)</label>
             <input type="text" id="username" name="username" required>
             <br>
