@@ -8,4 +8,5 @@ public class CM_PayWriteService {
 	public static CM_PayWriteService getInstance() {
 		return instance;
 	}
+	public 
 }
