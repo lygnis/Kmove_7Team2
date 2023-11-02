@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>ログイン</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    
 <style type="text/css">
 body {
     font-family: Arial, sans-serif;
@@ -40,7 +40,7 @@ input[type="text"], input[type="password"] {
     margin: 5px 0;
 }
 
-input[type="submit"], button[type="submit"] {
+input[type="submit"], button[type="button"] {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
@@ -49,7 +49,7 @@ input[type="submit"], button[type="submit"] {
     border-radius: 4px;
 }
 
-input[type="submit"]:hover, button[type="submit"]:hover {
+input[type="submit"]:hover, button[type="button"]:hover {
     background-color: #0056b3;
 }
 
@@ -67,8 +67,9 @@ input[type="submit"]:hover, button[type="submit"]:hover {
             <input type="password" id="password" name="password" required>
             <br>
             <input type="submit" value="LOGIN">
-            <button type="submit">JOIN</button>
+            <button type="button" onclick="location.href='./joinUser.jsp'">JOIN</button>
         </form>
+        
     </div>
 </body>
 </html>

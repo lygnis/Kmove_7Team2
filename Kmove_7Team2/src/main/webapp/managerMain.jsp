@@ -253,18 +253,21 @@ tr:last-child td:last-child {
 		<div id="top_menu">
 			<div class="navi_2017">
 				<ul class="navi_L_2017">
-					<li class="n01"><a
-						href="/"
-						title="HOME"><span id="SK01">HOME</span></a></li>
-					<li class="n02"><a href="/"
-						title="社員登録"><span id="SK02">社員登録</span></a></li>
-					<li class="n03"><a href="/"
-						title="社員現況"><span id="SK03">社員現況</span></a></li>
-					<li class="n07"><a
-						href="/"
-						title="給与入力/管理"><span id="SK07">給与入力/管理</span></a></li>
-					<li class="n09"><a href="/pzPayment/paymentRegisterList.php"
-						title="給与台帳"><span id="SK09">給与台帳</span></a></li>
+					<li class="n01">	
+						<span id="SK01">HOME</span>
+						</li>
+					<li class="n02">
+						<a href="/empReg.do" title="社員登録">
+						<span id="SK02">社員登録</span></a></li>
+					<li class="n03">
+						<a href="/" title="社員現況">
+						<span id="SK03">社員現況</span></a></li>
+					<li class="n07">
+						<a href="/" title="給与入力/管理">
+						<span id="SK07">給与入力/管理</span></a></li>
+					<li class="n09">
+					<a href="/payRead.do" title="給与台帳">
+						<span id="SK09">給与台帳</span></a></li>
 
 
 				</ul>
@@ -319,7 +322,7 @@ tr:last-child td:last-child {
 								
 
 							</tbody>
-							<div class="notice p_t10 p_b10">
+							
 						</table>
 					</li>
 
