@@ -7,7 +7,7 @@ import com.command.CM_CommandHandler;
 import com.service.SDJ.CM_PayWriteService;
 
 public class CM_PayReadHandler implements CM_CommandHandler {
-private static final String FORM_VIEW="WEB-INF/view/SDJ/payReadList.jsp"
+private static final String FORM_VIEW="WEB-INF/view/SDJ/payReadList.jsp";
 	@Override
 	public String process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		if (req.getMethod().equalsIgnoreCase("GET")) {
