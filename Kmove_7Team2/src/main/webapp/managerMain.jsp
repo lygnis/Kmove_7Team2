@@ -284,7 +284,7 @@ tr:last-child td:last-child {
 
 
 			<div class="emreg_lt">
-				<h3>使用者情報</h3> 
+				<h3>使用者情報</h3>
 				<ul class="em_photo w_120">
 					<li class="border_box b_gray ph"><img
 						id="disEmployeeDefaultImg" src="./imgs/ttt2.png"
