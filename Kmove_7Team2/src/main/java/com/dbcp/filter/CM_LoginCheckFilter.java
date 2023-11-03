@@ -27,6 +27,7 @@ public class CM_LoginCheckFilter implements Filter {
 		if(session == null || session.getAttribute("authUser") == null) {
 			HttpServletResponse response = (HttpServletResponse)arg1;
 			response.sendRedirect(request.getContextPath() + "/login.do");
+
 		}else {
 			arg2.doFilter(arg0, arg1);
 		}

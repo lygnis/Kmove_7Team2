@@ -61,7 +61,7 @@ input[type="submit"]:hover, button[type="button"]:hover {
         <h2>給与管理</h2>
         <form method="post" action="login.do">
             <label for="username">ID</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="id" required>
             <br>
             <label for="password">PASSWORD</label>
             <input type="password" id="password" name="password" required>
