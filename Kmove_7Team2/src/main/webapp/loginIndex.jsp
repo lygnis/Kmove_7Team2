@@ -60,8 +60,13 @@ input[type="submit"]:hover, button[type="button"]:hover {
     <div class="container">
         <h2>給与管理</h2>
         <form method="post" action="login.do">
+        <c:if test="${errors.odOrPwNotMarch}">
+		아이디와 암호가 일치하지 않습니다.
+		</c:if>
+		<p>
             <label for="username">ID</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="id" required>
+        </p>
             <br>
             <label for="password">PASSWORD</label>
             <input type="password" id="password" name="password" required>
