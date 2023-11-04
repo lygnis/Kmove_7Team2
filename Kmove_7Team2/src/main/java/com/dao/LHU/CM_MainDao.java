@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 import com.dbcp.util.CM_JDBCUtil;
 import com.model.LHU.CM_User;
+import com.model.LHU.CM_UserJoin;
 
 public class CM_MainDao {
 	private static CM_MainDao instance = new CM_MainDao();
@@ -29,8 +30,7 @@ public class CM_MainDao {
             	User = new CM_User(
                     rs.getString("emp_no"),
                     rs.getString("password"),
-                    rs.getString("manager")    	
-                );
+                    rs.getString("manager"));
             }
             return User;
         } finally {
@@ -40,16 +40,42 @@ public class CM_MainDao {
 
         
     }
+    public CM_UserJoin selectByIdEmetbl(Connection conn, String id) throws SQLException {
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        CM_UserJoin userJoin = null;
+
+        try {
+            pstmt = conn.prepareStatement("SELECT * FROM EMPLOYEE WHERE EMP_NO = ?");
+            pstmt.setString(1, id);
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+            	userJoin = new CM_UserJoin(
+                    rs.getString("emp_no"),
+
+                    rs.getString("manager"));
+            }
+            return userJoin;
+        } finally {
+            CM_JDBCUtil.close(rs);
+            CM_JDBCUtil.close(pstmt);
+        }
+
+        
+    }
     
-	public void insert(Connection conn, CM_User user) throws SQLException {
+	public void insertToLoginTbl(Connection conn, String emp_no, String password, String manager) throws SQLException {
 		try(PreparedStatement pstmt = conn.prepareStatement("insert into login_tbl values(?,?,?)")) {
 			
-			pstmt.setString(1, user.getId());
-			pstmt.setString(2, user.getPassword());
-			pstmt.setString(3, user.getManager());
+			pstmt.setString(1, emp_no);
+			pstmt.setString(2, password);
+			pstmt.setString(3, manager);
 			pstmt.executeUpdate();
 			
 			
 		}
 	}
+
+
 }
