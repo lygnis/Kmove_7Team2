@@ -1,10 +1,16 @@
 package com.command.Handler.LHU;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.command.CM_CommandHandler;
+import com.model.LHU.CM_UserJoinRequest;
+import com.service.LHU.CM_DuplicateIdException;
 import com.service.LHU.CM_JoinService;
+import com.service.LHU.CM_UserNotFoundException;
 
 public class CM_JoinHandler implements CM_CommandHandler {
 	private static final String FORM_VIEW = "joinUser.jsp";
@@ -39,20 +45,40 @@ public class CM_JoinHandler implements CM_CommandHandler {
 	}
 	
 	private String processSubmit(HttpServletRequest req, HttpServletResponse resp) throws Exception {
-        String emp_no = trim(req.getParameter("emp_no"));
-        String password = trim(req.getParameter("password"));
+        //String emp_no = trim(req.getParameter("emp_no"));
+        //String password = trim(req.getParameter("password"));
+        
+        CM_UserJoinRequest ujr = new CM_UserJoinRequest();
+        ujr.setEmp_no(req.getParameter("emp_no"));
+		ujr.setPassword(req.getParameter("password"));
+		ujr.setConfirmPassword(req.getParameter("confirmPassword"));
+        
+        Map<String, Boolean> errors = new HashMap<>();
+		req.setAttribute("errors", errors);
+		
+		ujr.validate(errors);
+		
+		if(!errors.isEmpty()) {
+			return FORM_VIEW;
+		}
 
-        if (joinService.joinUser(emp_no, password)) {
+        try  {
+        	joinService.join(ujr);
             // 가입 성공 시 로그인 페이지로 리다이렉트 또는 포워드
             resp.sendRedirect(req.getContextPath() + "/login.do");
-        } else {
+        } catch(CM_DuplicateIdException e) {
             // 가입 실패 시 오류 메시지를 설정하고 다시 가입 폼 페이지로 돌아감
-            req.setAttribute("joinError", "가입에 실패했습니다. 올바른 사원번호를 입력하세요.");
-            return FORM_VIEW;
-        }
+        	errors.put("duplicateId", Boolean.TRUE);
+			return FORM_VIEW;
+        } catch (CM_UserNotFoundException e) {
+        	errors.put("IdNotExist", Boolean.TRUE);
+			return FORM_VIEW;
+        	
+			// TODO: handle exception
+		}
         return null;
     }
-	 private String trim(String str) {
-		    return str == null ? null : str.trim();
-		}
+	/*
+	 * private String trim(String str) { return str == null ? null : str.trim(); }
+	 */
 }

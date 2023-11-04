@@ -64,6 +64,7 @@ public class CM_MainDao {
 
         
     }
+
     
 	public void insertToLoginTbl(Connection conn, String emp_no, String password, String manager) throws SQLException {
 		try(PreparedStatement pstmt = conn.prepareStatement("insert into login_tbl values(?,?,?)")) {
@@ -76,6 +77,8 @@ public class CM_MainDao {
 			
 		}
 	}
+
+	
 
 
 }
