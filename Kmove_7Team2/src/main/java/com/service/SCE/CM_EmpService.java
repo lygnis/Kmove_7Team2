@@ -25,7 +25,7 @@ public class CM_EmpService {
 			conn = CM_ConnectionProvider.getConnection();
 			// 트랜잭션 off
 			conn.setAutoCommit(false);
-			CM_EmpDao.getInstance().
+			//CM_EmpDao.getInstance().
 			
 			
 		}catch(SQLException e) {

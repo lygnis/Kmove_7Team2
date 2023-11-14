@@ -263,10 +263,10 @@ tr:last-child td:last-child {
 						<a href="/" title="社員現況">
 						<span id="SK03">社員現況</span></a></li>
 					<li class="n07">
-						<a href="/" title="給与入力/管理">
+						<a href="payRead.do" title="給与入力/管理">
 						<span id="SK07">給与入力/管理</span></a></li>
 					<li class="n09">
-					<a href="/payRead.do" title="給与台帳">
+					<a href="AllPay.do" title="給与台帳">
 						<span id="SK09">給与台帳</span></a></li>
 
 
