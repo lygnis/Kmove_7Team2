@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>社員登録</title>
-<link rel="stylesheet" type="text/css" href="testFile.css">
+<!-- <link rel="stylesheet" type="text/css" href="testFile.css"> -->
 </head>
 <body>
 

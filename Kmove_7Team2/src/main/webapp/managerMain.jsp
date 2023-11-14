@@ -257,7 +257,7 @@ tr:last-child td:last-child {
 						<span id="SK01">HOME</span>
 						</li>
 					<li class="n02">
-						<a href="/empReg.do" title="社員登録">
+						<a href="empReg.do" title="社員登録">
 						<span id="SK02">社員登録</span></a></li>
 					<li class="n03">
 						<a href="/" title="社員現況">

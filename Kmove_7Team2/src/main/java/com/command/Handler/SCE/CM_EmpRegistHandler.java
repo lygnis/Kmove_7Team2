@@ -13,7 +13,7 @@ import com.model.SCE.CM_MajInsur;
 import com.service.SCE.CM_EmpService;
 
 public class CM_EmpRegistHandler implements CM_CommandHandler {
-	private static final String FORM_VIEW = "/WEB-INF/view/SCE/WriteEmploye.jsp ";
+	private static final String FORM_VIEW = "/WEB-INF/view/SCE/employee.jsp";
 
 	@Override
 	public String process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
