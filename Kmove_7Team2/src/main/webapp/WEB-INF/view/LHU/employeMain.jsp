@@ -285,13 +285,7 @@ tr:last-child td:last-child {
 
 			<div class="emreg_lt">
 				<h3>使用者情報</h3>
-				<ul class="em_photo w_120">
-					<li class="border_box b_gray ph"><img
-						id="disEmployeeDefaultImg" src="./imgs/ttt2.png"
-						style="height: 117px;" vspace="10"></li>
-					<!-- ID:disEmployeeDefaultImg, alt:Info -->
-					<li class="p_t10 c"></li>
-				</ul>
+				
 				<ul>
 					<li>
 						<table border="1" width="300" height="100" align="center"
