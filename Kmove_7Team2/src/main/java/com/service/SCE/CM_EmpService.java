@@ -1,10 +1,7 @@
 package com.service.SCE;
 
-import java.security.interfaces.RSAKey;
 import java.sql.Connection;
 import java.sql.SQLException;
-
-import org.apache.tomcat.dbcp.dbcp2.Jdbc41Bridge;
 
 import com.connection.CM_ConnectionProvider;
 import com.dao.SCE.CM_EmpDao;
@@ -17,7 +14,6 @@ import com.model.SCE.CM_Military;
 public class CM_EmpService {
 	private static CM_EmpService instance = new CM_EmpService();
 	private CM_EmpDao empDao = new CM_EmpDao();
-	private CM_EmpService () {}
 	public static CM_EmpService getInstance() {
 		return instance;
 	}
@@ -28,18 +24,16 @@ public class CM_EmpService {
 			conn = CM_ConnectionProvider.getConnection();
 			// 트랜잭션 off
 			conn.setAutoCommit(false);
-			CM_Employee employee = empDao.searchEmpNo(conn,emp.getEmpNo());
-			if(employee != null) {
-				CM_JDBCUtil.rollback(conn);
-			} 
-			empDao.insert(conn, new CM_Employee(emp.getEmpNo(), null, null, null, null, null, null, null, null, null, null, null));
-			
+		
+			empDao.insert(conn, new CM_Employee(emp.getEmpNo(), emp.getName(), emp.getJoinDate(), emp.getQuitDate(), emp.getDepartment(), emp.getSpot(), emp.getSecNumber(), emp.getAddr(), emp.getCellPh(), emp.getEmail(), emp.getEtc(), emp.getAccount()));
+			conn.commit();
 			
 		}catch(SQLException e) {
-			e.printStackTrace();
+			CM_JDBCUtil.rollback(conn);
+			throw new RuntimeException(e);
 		}finally {
 			CM_JDBCUtil.close(conn);
 		}
-		/*private */
+		
 		}
 	}

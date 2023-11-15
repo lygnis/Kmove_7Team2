@@ -57,17 +57,19 @@ public class CM_EmpDao {
 	}
 	public void insert(Connection conn, CM_Employee info) throws SQLException {
 		try (PreparedStatement pstmt = conn
-				.prepareStatement("insert into ticket_tbl_01 values (?,?,?,?,?,?,?,?,?,?)")) {
+				.prepareStatement("insert into EMPLOYEE values(?,?,?,?,?,?,?,?,?,?,?,?)")) {
 			pstmt.setString(1, info.getEmpNo());
-			pstmt.setTimestamp(2, new Timestamp(info.getJoinDate().getTime()));
-			pstmt.setTimestamp(3, new Timestamp(info.getQuitDate().getTime()));
-			pstmt.setString(4, info.getDepartment());
-			pstmt.setString(5, info.getSpot());
-			pstmt.setString(6, info.getSecNumber());
-			pstmt.setString(7, info.getAddr());
-			pstmt.setString(8, info.getCellPh());
-			pstmt.setString(9, info.getEmail());
-			pstmt.setString(10, info.getEtc());
+			pstmt.setString(2, info.getName());
+			pstmt.setTimestamp(3, new Timestamp(info.getJoinDate().getTime()));
+			pstmt.setTimestamp(4, new Timestamp(info.getQuitDate().getTime()));
+			pstmt.setString(5, info.getDepartment());
+			pstmt.setString(6, info.getSpot());
+			pstmt.setString(7, info.getSecNumber());
+			pstmt.setString(8, info.getAddr());
+			pstmt.setString(9, info.getCellPh());
+			pstmt.setString(10, info.getEmail());
+			pstmt.setString(11, info.getEtc());
+			pstmt.setString(12, info.getAccount());
 			pstmt.executeUpdate();
 			
 			

@@ -14,7 +14,7 @@ import com.service.SCE.CM_EmpService;
 
 public class CM_EmpRegistHandler implements CM_CommandHandler {
 	private static final String FORM_VIEW = "/WEB-INF/view/SCE/employee.jsp";
-
+	private CM_EmpService empSer = new CM_EmpService();
 	@Override
 	public String process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		if (req.getMethod().equalsIgnoreCase("GET")) {
@@ -34,6 +34,7 @@ public class CM_EmpRegistHandler implements CM_CommandHandler {
 
 	private String processSubmit(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		CM_Employee cm_employee = setEmployee(req);
+		empSer.insertEmp(cm_employee, null, null, null);
 		return null;
 	}
 
@@ -41,7 +42,7 @@ public class CM_EmpRegistHandler implements CM_CommandHandler {
 		String empNo = req.getParameter("empNo"); // 사원번호
 		String name = req.getParameter("name");// 성명
 		String joinDatestr = req.getParameter("joinDate");// 입사일
-		// String quitDatestr = req.getParameter("quitDate");// 퇴사일
+		String quitDatestr = req.getParameter("quitDate");// 퇴사일
 		String departmen = req.getParameter("department"); // 부서
 		String spot = req.getParameter("spot"); // 직위
 		String secNumber = req.getParameter("secNumber"); // 주민번호
@@ -51,8 +52,8 @@ public class CM_EmpRegistHandler implements CM_CommandHandler {
 		String etc = req.getParameter("etc");
 		String account = req.getParameter("account");
 		Date joinDate = CM_ConvertHelper.toDate(joinDatestr);
-		// Date quitDate = CM_ConvertHelper.toDate(quitDatestr);
-		return new CM_Employee(empNo, name, joinDate, null, departmen, spot, secNumber, addr, cellPh, email, etc,
+		Date quitDate = CM_ConvertHelper.toDate(quitDatestr);
+		return new CM_Employee(empNo, name, joinDate, quitDate, departmen, spot, secNumber, addr, cellPh, email, etc,
 				account);
 	}
 

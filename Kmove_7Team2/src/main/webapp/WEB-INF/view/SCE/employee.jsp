@@ -8,7 +8,7 @@
 <!-- <link rel="stylesheet" type="text/css" href="testFile.css"> -->
 </head>
 <body>
-
+<form action="empReg.do" method="post">
 	<nav>
 		<a href="#">メイン</a> <a href="#">社員登録</a> <a href="#">社員現況</a>
 	</nav>
@@ -25,7 +25,7 @@
 				<td align=center>入社日</td>
 				<td><input type="date" name="joinDate" /></td>
 				<td align=center>退社日</td>
-				<td><input type="date" name="endDate" /></td>
+				<td><input type="date" name="quitDate" /></td>
 			</tr>
 			<tr>
 				<td align=center>部署</td>
@@ -148,5 +148,6 @@
 				value="キャンセル"> <input type="submit" value="リスト">
 		</p>
 	</div>
+	</form>
 </body>
 </html>
