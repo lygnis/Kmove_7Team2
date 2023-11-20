@@ -10,6 +10,7 @@ import java.util.Date;
 
 import com.dbcp.util.CM_ConvertHelper;
 import com.dbcp.util.CM_JDBCUtil;
+import com.model.SCE.CM_EmpList;
 import com.model.SCE.CM_Employee;
 
 public class CM_EmpDao {
@@ -75,23 +76,43 @@ public class CM_EmpDao {
 			
 		}
 	}
+	public CM_EmpList getEmpList (Connection conn) throws SQLException{
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		CM_EmpList data = new CM_EmpList();
+		try {
+			pstmt = conn.prepareStatement("select * from EMPLOYEE");
+			rs = pstmt.executeQuery();
+			CM_Employee member = null;
+			// 데이터를 찾는다 만약 사원 넘버가 존재하면
+			while (rs.next()) {
+				member = convertEmployee(rs);
+				data.setList(member);
+			}
+			return data;
+		} finally {
+			CM_JDBCUtil.close(rs);
+			CM_JDBCUtil.close(pstmt);
+		}
+	}
 	
 	// DB 데이터 컨버팅 작업 Employee
 	private CM_Employee convertEmployee(ResultSet rs) throws SQLException {
-		String empNo = rs.getString("empNo"); // 사원번호
-		String name = rs.getString("name");// 성명
-		Date joinDatestr = CM_ConvertHelper.forStamp(rs.getTimestamp("joinDate"));// 입사일
-		Date quitDatestr = CM_ConvertHelper.forStamp(rs.getTimestamp("quitDate"));// 퇴사일
-		String departmen = rs.getString("department"); // 부서
-		String spot =rs.getString("spot"); // 직위
-		String secNumber = rs.getString("secNumber"); // 주민번호
-		String addr = rs.getString("addr"); // 주소
-		String cellPh = rs.getString("cellPh");
-		String email = rs.getString("email");
-		String etc = rs.getString("etc");
-		String account = rs.getString("account");
+		String empNo = rs.getString("emp_No"); // 사원번호
+		String name = rs.getString("emp_name");// 성명
+		Date joinDatestr = CM_ConvertHelper.forStamp(rs.getTimestamp("join_Date"));// 입사일
+		Date quitDatestr = CM_ConvertHelper.forStamp(rs.getTimestamp("quit_Date"));// 퇴사일
+		String departmen = rs.getString("emp_dep"); // 부서
+		String spot =rs.getString("emp_spot"); // 직위
+		String secNumber = rs.getString("emp_sec_Num"); // 주민번호
+		String addr = rs.getString("emp_addr"); // 주소
+		String cellPh = rs.getString("emp_cellPh");
+		String email = rs.getString("emp_email");
+		String etc = rs.getString("emp_etc");
+		String account = rs.getString("sal_acount");
 		
 		return new CM_Employee(empNo, name, joinDatestr, quitDatestr, departmen, 
 				spot, secNumber, addr, cellPh, email, etc, account);
 	}
+	
 }

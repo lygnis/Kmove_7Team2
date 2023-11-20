@@ -5,13 +5,27 @@
 <head>
 <meta charset="UTF-8">
 <title>社員登録</title>
-<!-- <link rel="stylesheet" type="text/css" href="testFile.css"> -->
+<link rel="stylesheet" type="text/css" href="testFile.css">
 </head>
 <body>
+<div id="top_menu">
+			<div class="navi_2017">
+				<ul class="navi_L_2017">
+					<span id="SK01">HOME</span>
+
+
+					<a href="empReg.do" title="社員登録"> <span id="SK02">社員登録</span></a>
+
+					<a href="empList.do" title="社員現況"> <span id="SK03">社員現況</span></a>
+
+					<a href="payRead.do" title="給与入力/管理"> <span id="SK07">給与入力/管理</span></a>
+
+					<a href="AllPay.do" title="給与台帳"> <span id="SK09">給与台帳</span></a>
+
+				</ul>
+			</div>
+		</div>
 <form action="empReg.do" method="post">
-	<nav>
-		<a href="#">メイン</a> <a href="#">社員登録</a> <a href="#">社員現況</a>
-	</nav>
 	<div align=center>
 		<p>基本情報</p>
 		<table border="1" width="900px" height="300px">
